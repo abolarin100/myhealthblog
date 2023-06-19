@@ -3,7 +3,7 @@ import BlogList from "./BlogList";
 import useFetch from "./useFetch";
 
 const Home = () => {
-  const { error, isPending, data: blogs } = useFetch('http://localhost:8000/blogs')
+  const { error, isPending, data: blogs } = useFetch('https://my-json-server.typicode.com/abolarin100/data')
 
   return (
     <div className="home">
