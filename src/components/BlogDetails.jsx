@@ -4,11 +4,11 @@ import useFetch from "./useFetch";
 
 const BlogDetails = () => {
   const { id } = useParams();
-  const { data: blog, error, isPending } = useFetch('https://my-json-server.typicode.com/abolarin100/data' + id);
+  const { data: blog, error, isPending } = useFetch('https://my-json-server.typicode.com/abolarin100/data/blogs' + id);
   const history = useHistory();
 
   const handleClick = () => {
-    fetch('https://my-json-server.typicode.com/abolarin100/data' + blog.id, {
+    fetch('https://my-json-server.typicode.com/abolarin100/data/blogs' + blog.id, {
       method: 'DELETE'
     }).then(() => {
       history.push('/');
